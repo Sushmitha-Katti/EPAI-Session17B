@@ -1,25 +1,25 @@
-# write a python program to add two numbers 
-num1 = 10.5
-num2 = 20.5
+# write a python program to add two list of same length.
+num1 = [1,2,3]
+num2 = [4,5,6]
 sum = num1 + num2
 print(f'Sum: {sum}')
 
-# write a python function to add two user provided numbers and return the sum
-def add_two_numbers(num1, num2):
-    sum = num1 + num2
-    return sum
+# write a python program Convert KM/H to MPH
+kmh = 50
+mph =  0.6214 * kmh
+print("Speed:", kmh, "KM/H = ", mph, "MPH")
 
-# write a program to find and print the largest among three numbers
-num1 = 10
-num2 = 12
-num3 = 14
-if (num1 >= num2) and (num1 >= num3):
-    largest = num1
-elif (num2 >= num1) and (num2 >= num3):
-    largest = num2
+# write a program to find and print the smallest among three numbers
+num1 = 100
+num2 = 200
+num3 = 300
+if (num1 <= num2) and (num1 <= num3):
+    smallest = num1
+elif (num2 <= num1) and (num2 <= num3):
+    smallest = num2
 else:
-    largest = num3
-print(f'largest:{largest}')
+    smallest = num3
+print(f'smallest:{smallest}')
 
 # write a function to sort a list
 raw_list = [-5, -23, 5, 0, 23, -6, 23, 67]
