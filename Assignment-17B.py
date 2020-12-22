@@ -1,8 +1,18 @@
 # write a python program to add two list of same length.
-num1 = [1,2,3]
-num2 = [4,5,6]
-sum = num1 + num2
-print(f'Sum: {sum}')
+def add_two_list_items():
+    num1 = [1,2,3]
+    num2 = [4,5,6]
+    sum = num1 + num2
+    print(f'Sum: {sum}')
+
+
+# write a python program to add numbers from two list if first list item is even and second list item is odd.
+def add_two_lists_even_odd(l1, l2):
+    new = []
+    for x, y in zip(l1, l2):
+        if l1%2 == 0 and l2%2 != 0:
+            new.append(x+y)
+    return new
 
 # write a python program Convert KM/H to MPH
 kmh = 50
