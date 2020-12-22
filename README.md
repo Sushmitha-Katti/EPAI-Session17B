@@ -79,7 +79,7 @@
 75. write a python function to get the most common word in text
 76. write a python function for bitwise multiplication
 77. write a python function for bitwise division
-78. write a python function to check for set bit
+78. write a python program to implement Queue
 79. write a python function to get dot product of two lists of numbers
 80. write a python function to strip punctuations from a given string
 81. write a python function that returns biggest character in a string
