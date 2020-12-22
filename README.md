@@ -2,7 +2,7 @@
 100 python programing examples
 
 1.  write a python program to add two lists of same length
-2.  write a python program to add two list of same length.
+2.  write a python program to add numbers from two list if first list item is even and second list item is odd.
 3.  write a python program Convert KM/H to MPH
 4.  write a function to sort a list
 5.  write a function to print the time it takes to run a function
