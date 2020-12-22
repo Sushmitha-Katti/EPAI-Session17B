@@ -8,14 +8,14 @@ from itertools import permutations, combinations, combinations_with_replacement
 letters = string.ascii_lowercase
 
 
-# write a function to print pyramid pattern
+# write a python function to print pyramid pattern
 def pyramid_pattern(symbol='*', count=4):
     for i in range(1, count + 1):
         print(' ' * (count - i) + symbol * i, end='')
         print(symbol * (i - 1) + ' ' * (count - i))
 
 
-# write a function to count the occurrence of a given word in a given file
+# write a python function to count the occurrence of a given word in a given file
 def check_word_count(word, file):
     if not os.path.isfile(file):
         raise FileNotFoundError
@@ -30,50 +30,28 @@ def check_word_count(word, file):
     return c.get(word, 0)
 
 
-# write a function to make permutations from a list with given length
+# write a python function to make permutations from a list with given length
 def get_permutations(data_list, l=2):
     return list(permutations(data_list, r=l))
 
 
-# You are given a string.
-# Your task is to print all possible permutations of size of the string in lexicographic sorted order.
+# write a python program to get all possible permutations of size of the string in lexicographic sorted order.
 def get_ordered_permutations(word, k):
     [print(''.join(x)) for x in sorted(list(permutations(word, int(k))))]
 
 
-# You are given a string .
-# Your task is to print all possible combinations, up to size , of the string in lexicographic sorted order.
+# write a python program to get all possible combinations, up to size of the string in lexicographic sorted order.
 def get_ordered_combinations(string, k):
     [print(''.join(x)) for i in range(1, int(k) + 1) for x in combinations(sorted(string), i)]
 
 
-# You are given a string .
-# Your task is to print all possible size replacement combinations of the string in lexicographic sorted order.
+# write a python function to get all possible size replacement combinations of the string in lexicographic sorted order.
 def get_ordered_combinations_with_replacement(string, k):
     [print(''.join(x)) for x in combinations_with_replacement(sorted(string), int(k))]
 
 
-""" Caesar Cipher
-    A Caesar cipher is a simple substitution cipher in which each letter of the
-    plain text is substituted with a letter found by moving n places down the
-    alphabet. For example, assume the input plain text is the following:
 
-        abcd xyz
-
-    If the shift value, n, is 4, then the encrypted text would be the following:
-
-        efgh bcd
-
-    You are to write a function that accepts two arguments, a plain-text
-    message and a number of letters to shift in the cipher. The function will
-    return an encrypted string with all letters transformed and all
-    punctuation and whitespace remaining unchanged.
-
-    Note: You can assume the plain text is all lowercase ASCII except for
-    whitespace and punctuation.
-"""
-
-
+# write a python function for Caesar Cipher, with given shift value and return the modified text
 def caesar_cipher(text, shift=1):
     alphabet = string.ascii_lowercase
     shifted_alphabet = alphabet[shift:] + alphabet[:shift]
@@ -81,12 +59,12 @@ def caesar_cipher(text, shift=1):
     return text.translate(table)
 
 
-# swap case
+# write a python function for a string to swap the case of all letters.
 def swap_case(s):
     return ''.join(x for x in (i.lower() if i.isupper() else i.upper() for i in s))
 
 
-# get symmetric difference between two sets from user
+# write a python function to get symmetric difference between two sets from user.
 def symmetric_diff_sets():
     M, m = input(), set(list(map(int, input().split())))
     N, n = input(), set(list(map(int, input().split())))
@@ -95,18 +73,14 @@ def symmetric_diff_sets():
         print(i)
 
 
-# You are given two sets, and .
-# Your job is to find whether set is a subset of set .
-#
-# If set is subset of set , print True.
-# If set is not a subset of set , print False.
+# write a python function to check if given set is subset or not
 def check_subset():
     for _ in range(int(input())):
         x, a, z, b = input(), set(input().split()), input(), set(input().split())
     print(a.issubset(b))
 
 
-# write basic HTML parser
+# write a python program for basic HTML parser
 from html.parser import HTMLParser
 
 
@@ -123,7 +97,7 @@ for i in range(int(input())):
     parser.feed(input())
 
 
-# Named Entity Recognizer
+# write a python function for Named Entity Recognizer using NLTK
 def ner_checker(texts):
     all_set = set()
 
@@ -139,31 +113,19 @@ def ner_checker(texts):
     return all_set
 
 
-# You are given a string . Suppose a character 'c' occurs consecutively X times in the string.
-# Replace these consecutive occurrences of the character 'c' with  (X, c) in the string.
-# Sample Input
-#
-# 1222311
-#
-# Sample Output
-#
-# (1, 1) (3, 2) (1, 3) (2, 1)
-
+#write a function to compress a given string. Suppose a character 'c' occurs consecutively X times in the string. Replace these consecutive occurrences of the character 'c' with  (X, c) in the string.
 def compress(text):
     from itertools import groupby
     for k, g in groupby(text):
         print("({}, {})".format(len(list(g)), k), end=" ")
 
 
-# There is a string, , of lowercase English letters that is repeated infinitely many times. Given an integer 'n' , find and print the number of letter a's in the first
-# letters of the infinite string.
+# write a python function to count 'a's in the repetition of a given string 'n' times.
 def repeated_string(s, n):
     return s.count('a') * (n // len(s)) + s[:n % len(s)].count('a')
 
 
-# You are given a string . It consists of alphanumeric characters, spaces and symbols(+,-).
-# Your task is to find all the substrings of S that contains 2 or more vowels.
-# Also, these substrings must lie in between 2 consonants and should contain vowels only.
+# write a python function to find all the substrings of given string that contains 2 or more vowels. Also, these substrings must lie in between 2 consonants and should contain vowels only.
 def find_substr():
     import re
     v = "aeiou"
@@ -172,15 +134,13 @@ def find_substr():
     print('\n'.join(m or ['-1']))
 
 
-# Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
-# Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+# write a python function that given five positive integers and find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
 def min_max():
     nums = [int(x) for x in input().strip().split(' ')]
     print(sum(nums) - max(nums), sum(nums) - min(nums))
 
 
-# You are given an array of 'n' integers and a positive integer k.
-# Find and print the number of (i, j) pairs where i<j and ar[i]+ar[j] is divisible by k
+# write a python function to find the number of (i, j) pairs where i<j and ar[i]+ar[j] is divisible by k in a data list
 def divisible_sum_pairs(arr, k):
     count = 0
     n = len(arr)
@@ -210,7 +170,7 @@ obj = CircleArea(r)
 print("Area of circle:", obj.area())
 
 
-# Write a python program to Count and print the Number of Words in a Text File
+# Write a python function to count the number of Words in a Text File
 def check_words():
     fname = input("file name: ")
     num_words = 0
@@ -221,7 +181,7 @@ def check_words():
     print("Number of words = ", num_words)
 
 
-# Write a python program to Count the Number of Lines in a Text File
+# Write a python function to Count the Number of Lines in a Text File
 def check_lines():
     fname = input("file name: ")
     num_lines = 0
@@ -241,7 +201,7 @@ def count_blank_space():
     return count
 
 
-# Write a Python Program to check if 2 strings are anagrams or not
+# Write a python function to check if 2 strings are anagrams or not
 def anagram(s1, s2):
     if sorted(s1) == sorted(s2):
         return True
@@ -249,7 +209,7 @@ def anagram(s1, s2):
         return False
 
 
-# Write a Python Program to Remove and print the Duplicate Items from a List and return the modified data list
+# Write a python function to remove the duplicate items from a List and return the modified data list
 def remove_duplicates(data):
     c = Counter(data)
     s = set(data)
@@ -261,42 +221,83 @@ def remove_duplicates(data):
     return data
 
 
-# write a function to get the most common word in text
+# write a python function to get the most common word in text
 def most_common(text):
     c = Counter(text)
     return c.most_common(1)
 
 
-# write a function to do bitwise multiplication on a given bin number by given shifts
+# write a python function to do bitwise multiplication on a given bin number by given shifts
 def bit_mul(n, shift):
     return n << shift
 
 
-# write a function to do bitwise division on a given bin number by given shifts
+# write a python function for bitwise division with given number of shifts
 def bit_div(n, shift):
     return n >> shift
 
 
-# Write a function to count set bits in a given number
-def count_set_bits(n):
-    count = 0
-    while n:
-        n &= n - 1
-        count += 1
-    return count
+# write a python program to implement Queue
+from collections import deque
+
+class Queue():
+    '''
+    Thread-safe, memory-efficient, maximally-sized queue supporting queueing and
+    dequeueing in worst-case O(1) time.
+    '''
 
 
-# Write a Python function to calculate dot product of two given data lists
+    def __init__(self, max_size = 10):
+        '''
+        Initialize this queue to the empty queue.
+
+        Parameters
+        ----------
+        max_size : int
+            Maximum number of items contained in this queue. Defaults to 10.
+        '''
+
+        self._queue = deque(maxlen=max_size)
+
+
+    def enqueue(self, item):
+        '''
+        Queues the passed item (i.e., pushes this item onto the tail of this
+        queue).
+
+        If this queue is already full, the item at the head of this queue
+        is silently removed from this queue *before* the passed item is
+        queued.
+        '''
+
+        self._queue.append(item)
+
+
+    def dequeue(self):
+        '''
+        Dequeues (i.e., removes) the item at the head of this queue *and*
+        returns this item.
+
+        Raises
+        ----------
+        IndexError
+            If this queue is empty.
+        '''
+
+        return self._queue.pop()
+
+
+# write a python function to get dot product between two lists of numbers
 def dot_product(a, b):
     return sum(e[0] * e[1] for e in zip(a, b))
 
 
-# write a function to strip punctuations from a given string
+# write a python function to strip punctuations from a given string
 def strip_punctuations(s):
     return s.translate(str.maketrans('', '', string.punctuation))
 
 
-# Write a Python function that returns biggest character in a string
+# write a python function that returns biggest character in a string
 from functools import reduce
 
 
@@ -306,7 +307,7 @@ def biggest_char(string):
     return reduce(lambda x, y: x if ord(x) > ord(y) else y, string)
 
 
-# Write a Python Program to Count the Number of Digits in a Number
+# write a python function to Count the Number of Digits in a Number
 def count_digits():
     n = int(input("Enter number:"))
     count = 0
@@ -316,14 +317,14 @@ def count_digits():
     return count
 
 
-# write a function to count number of vowels in a string
+# write a python function to count number of vowels in a string
 def count_vowels(text):
     v = set('aeiou')
     for i in v:
         print(f'\n {i} occurs {text.count(i)} times')
 
 
-# write a function to check external IP address
+# write a python function to check external IP address
 def check_ip():
     import re
     import urllib.request as ur
@@ -335,7 +336,7 @@ def check_ip():
         return ip[0]
 
 
-# some weird random program
+# write a python function for some weird hypnosis text.
 def weird():
     import random
 
@@ -376,7 +377,7 @@ def weird():
     print(as_text(truncate(200, scriptlist)))
 
 
-# dice roll
+# write a python function for dice roll asking user for input to continue and randomly give an output.
 def dice():
     import random
     min = 1
@@ -392,7 +393,7 @@ def dice():
 from cryptography.fernet import Fernet
 
 
-# encrypt and decrypt class
+# write a python program to Encrypt and Decrypt features within 'Secure' class with key generation, using cryptography module
 class Secure:
     def __init__(self):
         """
@@ -435,19 +436,19 @@ encrypted = s.encrypt_message("My deepest secret!")
 s.decrypt_message(encrypted)
 
 
-# get SHA256 for the text passed
+# write a python function to generate SHA256 for given text
 def get_sha256(text):
     import hashlib
     return hashlib.sha256(text).hexdigest()
 
 
-# check if a a hashed data with SHA256 is valid or not
+# write a python function to check if SHA256 hashed value is valid for given data or not
 def check_sha256_hash(hashed, data):
     import hashlib
     return True if hashed == hashlib.sha256(data.encode()).hexdigest() else False
 
 
-# get html for a url passed
+# write a python function to get HTML code for a given URL
 def get_html(url="http://www.python.org"):
     import urllib.request
 
@@ -458,7 +459,7 @@ def get_html(url="http://www.python.org"):
     print(mystr)
 
 
-# get BitCoin price every 5 seconds
+# write a python function to get Bitcoin prices after every given 'interval' seconds
 def get_btc_price(interval=5):
     import requests
     import json
@@ -478,7 +479,7 @@ def get_btc_price(interval=5):
         sleep(interval)
 
 
-# Get Stock prices for a company
+# write a python function to get stock prices for a company from 2015 to 2020-12
 def get_stock_prices(tickerSymbol='TSLA'):
     import yfinance as yf
 
@@ -492,7 +493,7 @@ def get_stock_prices(tickerSymbol='TSLA'):
     print(tickerDf)
 
 
-# get 10 best Artists playing on Apple iTunes
+# write a python function to get 10 best Artists playing on Apple iTunes
 def get_artists():
     import requests
     url = 'https://itunes.apple.com/us/rss/topsongs/limit=10/json'
@@ -503,7 +504,7 @@ def get_artists():
         print(artist_name)
 
 
-# get prominent words using TFIDF from corpus
+# write a python function to get prominent words from user test corpus using TFIDF vectorizer
 def get_words(corpus, new_doc, top=2):
     import numpy as np
     from sklearn.feature_extraction.text import TfidfVectorizer
@@ -532,7 +533,7 @@ def get_words(corpus, new_doc, top=2):
     print([get_top_tf_idf_words(response, 2) for response in responses])
 
 
-# get word cloud for given text data
+# write a python function to generate wordcloud on given text or file
 import os
 
 
@@ -564,7 +565,7 @@ def get_word(data):
 # get_word(data="./christmas_carol.txt")
 
 
-# sort each item in a data structure on one of the keys
+# write a python function to sort each item in a data structure on one of the keys
 def sort_list_with_key():
     animals = [
         {'type': 'lion', 'name': 'Mr. T', 'age': 7},
@@ -573,7 +574,7 @@ def sort_list_with_key():
     print(sorted(animals, key=lambda animal: -animal['age']))
 
 
-# generator for an infinite sequence
+# write a python function with generator for an infinite sequence
 def infinite_sequence():
     n = 0
     while True:
@@ -584,7 +585,7 @@ def infinite_sequence():
 import uuid
 
 
-# generate uuid
+# write a python function to generate a Unique identifier across space and time in this cosmos.
 def get_uuid():
     return uuid.uuid4()
 
@@ -592,12 +593,12 @@ def get_uuid():
 import secrets
 
 
-# get_cryptographically_secure byte and hex data for a given number
+# write a python function to generate cryptographically strong pseudo-random data
 def get_cryptographically_secure_data(n=101):
     return secrets.token_bytes(n), secrets.token_hex(n)
 
 
-# convert byte to UTF-8
+# write a python function to convert byte to UTF-8
 def byte_to_utf8(data):
     return data.decode("utf-8")
 print(byte_to_utf8(data=b'r\xc3\xa9sum\xc3\xa9'))
