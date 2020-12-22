@@ -53,52 +53,52 @@
 50. write a python function to Count Set Bits in a Number
 51. write a python program to Flatten a List without using Recursion
 
-52. write a function to print pyramid pattern
-53. write a function to count the occurrence of a given word in a given file
-54. write a function to make permutations from a list with given length
-55. write a python program to print all possible permutations of size of the string in lexicographic sorted order.
-56. write a python program to print all possible combinations, up to size , of the string in lexicographic sorted order.
-57. write a python program to print all possible size replacement combinations of the string in lexicographic sorted order.
+52. write a python function to print pyramid pattern
+53. write a python function to count the occurrence of a given word in a given file
+54. write a python function to make permutations from a list with given length
+55. write a python program to get all possible permutations of size of the string in lexicographic sorted order.
+56. write a python program to get all possible combinations, up to size , of the string in lexicographic sorted order.
+57. write a python function to get all possible size replacement combinations of the string in lexicographic sorted order.
 58. write a python function for Caesar Cipher, with given shift value.
 59. write a python function for a string to swap the case of all letters.
-60. write a python program to get symmetric difference between two sets from user.
-61. write a python program to check if given set is subset or not
-62. write a python program for basic HTML parser
-63. write a python program for Named Entity Recognizer using NLTK
+60. write a python function to get symmetric difference between two sets from user.
+61. write a python function to check if given set is subset or not
+62. write a python function for basic HTML parser
+63. write a python function for Named Entity Recognizer using NLTK
 64. write a function to compress a given string. You are given a string . Suppose a character 'c' occurs consecutively X times in the string. Replace these consecutive occurrences of the character 'c' with  (X, c) in the string.
-65. write a function to count 'a's in repetition of a given string 'n' times.
-66. write a python program to find all the substrings of given string that contains 2 or more vowels. Also, these substrings must lie in between 2 consonants and should contain vowels only.
-67. write a python program that given five positive integers and find the minimum and maximum values that can be calculated by summing exactly four of the five integers.  Then print the respective minimum and maximum values as a single line of two space-separated long integers.
-68. write a python program to find and print the number of (i, j) pairs where i<j and ar[i]+ar[j] is divisible by k
+65. write a python function to count 'a's in repetition of a given string 'n' times.
+66. write a python function to find all the substrings of given string that contains 2 or more vowels. Also, these substrings must lie in between 2 consonants and should contain vowels only.
+67. write a python function that given five positive integers and find the minimum and maximum values that can be calculated by summing exactly four of the five integers.
+68. write a python function to find and print the number of (i, j) pairs where i<j and ar[i]+ar[j] is divisible by k
 69. write a python program with Class to calculate area of a circle and print the vale for a radius
-70. write a python program to Count and print the Number of Words in a Text File
-71. write a python program to Count the Number of Lines in a Text File
+70. write a python function to Count and print the Number of Words in a Text File
+71. write a python function to Count the Number of Lines in a Text File
 72. write a python function that Counts the Number of Blank Spaces in a Text File
-73. write a function to check for anagrams
-74. write a Python Program to Remove and print the Duplicate Items from a List and return the modified data list
-75. write a function to get the most common word in text
-76. write a python program for bitwise multiplication
-77. write a python program for bitwise division
-78. write a python program to check for set bit
-79. write a python program to get dot product of two lists of numbers
-80. write a function to strip punctuations from a given string
-81. write a Python function that returns biggest character in a string
-82. write a Python Program to Count the Number of Digits in a Number
-83. write a function to count number of vowels in a string
-84. write a function to check external IP address
-85. write a python program for some weird hypnosis text.
-86. write a python program for dice roll asking user for input to continue and randomly give an output.
+73. write a python function to check for anagrams
+74. write a python function to Remove and print the Duplicate Items from a List and return the modified data list
+75. write a python function to get the most common word in text
+76. write a python function for bitwise multiplication
+77. write a python function for bitwise division
+78. write a python function to check for set bit
+79. write a python function to get dot product of two lists of numbers
+80. write a python function to strip punctuations from a given string
+81. write a python function that returns biggest character in a string
+82. write a python function to Count the Number of Digits in a Number
+83. write a python function to count number of vowels in a string
+84. write a python function to check external IP address
+85. write a python function for some weird hypnosis text.
+86. write a python function for dice roll asking user for input to continue and randomly give an output.
 87. write a python program to Encrypt and Decrypt features within 'Secure' class with key generation, using cryptography module
-88. write a python program to generate SHA256 for data
-89. write a python program to check if SHA256 hashed value is valid for given data or not 
-90. write a program to get HTML code for a given URL
-91. write a program to get **Bitcoin** prices after every given *'interval'*
-92. write a program to get stock prices for a company from 2015 to 2020-12
-93. write a python program to get 10 best Artists playing on Apple iTunes
-94. write a python program to get prominent words from user test corpus using TFIDF vectorizer
-95. write a python program to generate wordcloud on given text or file
-96. write a python program to sort each item in a data structure on one of the keys
-97. write a python program with generator for an infinite sequence
-98. write a python program to generate a **Unique identifier** *across space and time in this cosmos.*
-99. write a python program to generate cryptographically strong pseudo-random data
-100. write a python program to convert byte to UTF-8
+88. write a python function to generate SHA256 for data
+89. write a python function to check if SHA256 hashed value is valid for given data or not 
+90. write a python function to get HTML code for a given URL
+91. write a python function to get **Bitcoin** prices after every given *'interval'*
+92. write a python function to get stock prices for a company from 2015 to 2020-12
+93. write a python function to get 10 best Artists playing on Apple iTunes
+94. write a python function to get prominent words from user test corpus using TFIDF vectorizer
+95. write a python function to generate wordcloud on given text or file
+96. write a python function to sort each item in a data structure on one of the keys
+97. write a python function with generator for an infinite sequence
+98. write a python function to generate a **Unique identifier** *across space and time in this cosmos.*
+99. write a python function to generate cryptographically strong pseudo-random data
+100. write a python function to convert byte to UTF-8
