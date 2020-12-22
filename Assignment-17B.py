@@ -32,7 +32,7 @@ while raw_list:
     sorted_list.append(minimum)
     raw_list.remove(minimum)    
 
-print soreted_list
+print(soreted_list)
 
 # write a function to print the time it takes to run a function
 import time
@@ -297,8 +297,8 @@ def jpeg_res(filename):
 ip_str = 'Hello, have you tried our tutorial section yet?'
 ip_str = ip_str.casefold()
 count = {x:sum([1 for char in ip_str if char == x]) for x in 'aeiou'}
-
 print(count)
+        
 # write a python Program to Find ASCII Value of Character
 c = 'p'
 print("The ASCII value of '" + c + "' is", ord(c))
@@ -358,10 +358,10 @@ def convertToBinary(n):
 # wrtie a python function to solve Tower Of Hanoi and print necessary statements
 def TowerOfHanoi(n , source, destination, auxiliary): 
     if n==1: 
-        print "Move disk 1 from source",source,"to destination",destination 
+        print("Move disk 1 from source",source,"to destination",destination) 
         return
     TowerOfHanoi(n-1, source, auxiliary, destination) 
-    print "Move disk",n,"from source",source,"to destination",destination 
+    print("Move disk",n,"from source",source,"to destination",destination) 
     TowerOfHanoi(n-1, auxiliary, destination, source) 
 
 # write a python function to find the number of times every day occurs in a Year and print them
